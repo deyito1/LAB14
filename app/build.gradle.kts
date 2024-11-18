@@ -6,7 +6,7 @@ plugins {
 android {
 
     namespace = "com.tecsup.lab14"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.tecsup.lab14"
