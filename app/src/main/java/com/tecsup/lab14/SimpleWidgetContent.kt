@@ -43,7 +43,10 @@ class SimpleWidgetContent : GlanceAppWidget() {
                     text = "Página Principal",
                     onClick = actionStartActivity<MainActivity>()
                 )
-
+                Button(
+                text = "Ir a Segunda Vista",
+                onClick = actionStartActivity<SecondActivity>() // Cambiado para abrir SecondActivity
+                )
             }
         }
     }

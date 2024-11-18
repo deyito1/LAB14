@@ -12,14 +12,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.tecsup.lab14.ui.theme.LAB14Theme
 
-class MainActivity : ComponentActivity() {
+class SecondActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             LAB14Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    MainGreeting(
-                        name = "Android",
+                    Greeting(
+                        name = "Segunda Vista",
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
@@ -29,17 +29,17 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun MainGreeting(name: String, modifier: Modifier = Modifier) {
+fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
-        text = "¡Bienvenido a la vista principal, $name!",
+        text = "¡Bienvenido a la $name!",
         modifier = modifier
     )
 }
 
 @Preview(showBackground = true)
 @Composable
-fun MainGreetingPreview() {
+fun GreetingPreview() {
     LAB14Theme {
-        MainGreeting("Android")
+        Greeting("Segunda Vista")
     }
 }
